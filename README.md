@@ -1,16 +1,16 @@
 # vue-template
 
-## Project setup
+## 安装依赖项
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 启动项目
 ```
-npm run serve
+npm start
 ```
 
-### Compiles and minifies for production
+### 打包
 ```
 npm run build
 ```
@@ -26,4 +26,4 @@ npm run lint
 ```
 
 ### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+See [官方地址](https://cli.vuejs.org/config/).

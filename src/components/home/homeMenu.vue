@@ -10,8 +10,8 @@
     >
       <router-link :to="`/home/${item.tab}`">{{item.txt}}</router-link>
     </a-menu-item>
-
   </a-menu>
+
 </template>
 <script>
 import tab from '../../mock/tab';

@@ -7,7 +7,7 @@
           <a-list-item-meta
             :description="`${item.author.loginname}发表于:${item.create_at.split('T')[0]}`"
           >
-            <router-link slot="title" :to="`/homedetail/${item.id}`">
+            <router-link slot="title" :to="`/homedetail/id=${item.id}`">
               <a-tag color="#80bd01">{{item.tab | isTab}}</a-tag>
               {{item.title}}
             </router-link>
@@ -19,7 +19,6 @@
           </ul>
         </a-list-item>
       </a-list>
-      <!-- <a-spin size="large" class="loading" :spinning="loading"/> -->
     </div>
     <div>
       <!-- 设置分页 -->

@@ -31,7 +31,7 @@ export default new Router({
       component: () => import('../views/About.vue'),
     },
     {
-      path: '/homedetail/:id', // 首页详情
+      path: '/homedetail/id=:id', // 首页详情
       name: 'homedetail',
       component: () => import('../views/HomeDetail.vue'),
     },

@@ -26,13 +26,22 @@
               <a-button><a-icon type="bars" /></a-button>
               <a-menu slot="overlay">
                 <a-menu-item>
-                  <router-link to="/"><a-icon type="home" />首页</router-link>
+                  <router-link to="/">
+                    <a-icon type="book" />
+                    <span class="text">首页</span>
+                  </router-link>
                 </a-menu-item>
                 <a-menu-item>
-                  <router-link to="/book"><a-icon type="book" />新手入门</router-link>
+                  <router-link to="/book">
+                    <a-icon type="book" />
+                    <span class="text">新手入门</span>
+                  </router-link>
                 </a-menu-item>
                 <a-menu-item>
-                  <router-link to="/about"><a-icon type="info-circle-o"/>关于</router-link>
+                  <router-link to="/about">
+                    <a-icon type="info-circle-o"/>
+                    <span class="text">关于</span>
+                  </router-link>
                 </a-menu-item>
               </a-menu>
             </a-dropdown>

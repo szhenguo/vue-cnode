@@ -7,14 +7,8 @@
 </template>
 
 <script>
-import axios from 'axios';
+import { getIndexListDstail } from '../api/api';
 export default {
-  props: {
-    id: {
-      type: String,
-      default: 'Vue!',
-    },
-  },
   data() {
     return {
       homeDetailData: '',
@@ -27,9 +21,10 @@ export default {
   methods: {
     async fetchDetailData() {
       try {
-        const response = await axios.get(`https://cnodejs.org/api/v1/topic/${this.$route.params.id}`);
+        const { data } = (await getIndexListDstail(this.$route.params.id)).data;
+        console.log('res', data);
         this.loading = false;
-        this.homeDetailData = response.data.data;
+        this.homeDetailData = data;
       } catch (error) {
         console.error(error);
       }

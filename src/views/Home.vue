@@ -15,13 +15,14 @@
 </template>
 
 <script>
-import HomeMenu from '../components/home/homeMenu';
+import HomeMenu from '../components/home/homeMenu.vue';
 export default {
   components: {
     HomeMenu,
   },
 };
 </script>
+
 <style lang="scss" scoped>
 .home-container {
   overflow: hidden;

@@ -1,6 +1,7 @@
-### 项目介绍
+## 项目介绍
 
-**cnode官网~使用到技术axios + vue + vue-router + 之后会添加vuex**
+**cnode官网~使用到技术axios + vue + vue-router**
+**项目不复杂没有使用vuex后期会添加**
 
 ## 项目构建步骤
 

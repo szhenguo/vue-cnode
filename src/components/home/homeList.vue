@@ -34,7 +34,7 @@
   </div>
 </template>
 <script>
-import { getorglist } from '../../../api/api';
+import { getIndexList } from '../../api/api';
 export default {
   data() {
     return {
@@ -46,19 +46,13 @@ export default {
   },
   filters: {
     isTab: (value) => {
-      console.log('value', value);
-      if (value === 'ask') {
-        return (value = '问题');
-      }
-      if (value === 'share') {
-        return (value = '分享');
-      }
-      if (value === 'job') {
-        return (value = '招聘');
-      }
-      if (value === 'dev') {
-        return (value = '测试');
-      }
+      const dict = {
+        ask: '问题',
+        dev: '测试',
+        job: '招聘',
+        share: '分享',
+      };
+      return dict[value];
     },
   },
   created() {
@@ -68,20 +62,11 @@ export default {
     $route: 'fetchData',
   },
   methods: {
-    fetchData() {
+    async fetchData() {
       this.loading = true;
-      fetch(`https://cnodejs.org/api/v1/topics?tab=${this.$route.params.id}&page=${this.page}&limit=${this.limit}`)
-        .then((response) => {
-          return response.json();
-        })
-        .then((result) => {
-          console.log(result.data, '数据');
-          this.loading = false;
-          this.homeListData = result.data;
-        })
-        .catch((err) => {
-          console.log('parsing failed', err);
-        });
+      const { data } = (await getIndexList({id: this.$route.params.id, page: this.page, limit: this.limit})).data;
+      this.loading = false;
+      this.homeListData = data;
     },
     onChange(pageNumber) {
       this.page = pageNumber;

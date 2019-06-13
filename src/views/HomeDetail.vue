@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   props: {
     id: {
@@ -21,22 +22,17 @@ export default {
     };
   },
   created() {
-    const newsId = this.$route.params.id;
-    console.log(newsId, '$route.params.id');
     this.fetchDetailData();
   },
   methods: {
-    fetchDetailData() {
-      fetch(`https://cnodejs.org/api/v1/topic/${this.$route.params.id}`)
-        .then((response) => {
-          return response.json();
-        }).then((result) => {
-          console.log(result, '数据');
-          this.loading = false;
-          this.homeDetailData = result.data;
-        }).catch((err) => {
-          console.log('parsing failed', err);
-        });
+    async fetchDetailData() {
+      try {
+        const response = await axios.get(`https://cnodejs.org/api/v1/topic/${this.$route.params.id}`);
+        this.loading = false;
+        this.homeDetailData = response.data.data;
+      } catch (error) {
+        console.error(error);
+      }
     },
   },
 };

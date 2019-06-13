@@ -8,31 +8,23 @@
         <home-menu mode="horizontal" id="indexXsMenu"></home-menu>
       </a-col>
       <a-col :md="18" :xs="24" class="homeList">
-        <home-list>
-          <router-view></router-view>
-        </home-list>
+        <router-view></router-view>
       </a-col>
     </a-row>
   </div>
 </template>
 
 <script>
-import HomeMenu from './components/homeMenu.vue';
-import homeList from './components/homeList.vue';
+import HomeMenu from '../components/home/homeMenu';
 export default {
-  data() {
-    return {
-      num: 10,
-    };
-  },
   components: {
     HomeMenu,
-    homeList,
   },
 };
 </script>
 <style lang="scss" scoped>
 .home-container {
+  overflow: hidden;
   .wrap {
     position: relative;
     max-width: 980px;

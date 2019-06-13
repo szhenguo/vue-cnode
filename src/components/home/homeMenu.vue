@@ -14,7 +14,7 @@
   </a-menu>
 </template>
 <script>
-import tab from '../../../mock/tab.js';
+import tab from '../../mock/tab';
 export default {
   props: {
     mode: {

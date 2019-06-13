@@ -10,7 +10,7 @@
   </div>
 </template>
 <script>
-import data from '../../mock/about.js';
+import data from '../mock/about';
 export default {
   data() {
     return {

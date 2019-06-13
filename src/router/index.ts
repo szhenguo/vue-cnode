@@ -11,29 +11,29 @@ export default new Router({
       path: '/', // 首页
       name: 'home',
       redirect: '/home/all',
-      component: () => import('../views/home/Home.vue'),
+      component: () => import('../views/Home.vue'),
       children: [
         {
           path: '/home/:id',
           name: 'homePath',
-          component: () => import('../views/home/Home.vue'),
+          component: () => import('../components/home/homeList.vue'),
         },
       ],
     },
     {
       path: '/book', // 新手入门
       name: 'book',
-      component: () => import('../views/book/Book.vue'),
+      component: () => import('../views/Book.vue'),
     },
     {
       path: '/about', // 关于
       name: 'about',
-      component: () => import('../views/about/About.vue'),
+      component: () => import('../views/About.vue'),
     },
     {
       path: '/homedetail/:id', // 首页详情
       name: 'homedetail',
-      component: () => import('../views/homeDetail/HomeDetail.vue'),
+      component: () => import('../views/HomeDetail.vue'),
     },
     {
       path: '/test',  // 测试

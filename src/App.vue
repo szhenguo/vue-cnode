@@ -29,7 +29,6 @@ export default class App extends Vue {}
   flex-direction: column;
   .pageWrap {
     flex: 1;
-    overflow: hidden;
   }
 }
 img {

@@ -7,10 +7,13 @@
 ``` bash
 # 安装依赖
 $ npm i
+
 # 启动服务 访问 localhost:8888
 $ npm start
+
 # 生成环境打包
 $ npm run  build
+
 ```
 
 ### Customize configuration

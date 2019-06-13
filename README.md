@@ -1,30 +1,16 @@
 # 项目介绍
 
-阿萨德按时打算
+**cnode官网~使用到技术axios + vue + vue-router + 之后会添加vuex**
 
-## 安装依赖项
-```
-npm install
-```
+## 项目构建步骤
 
-### 启动项目
-```
-npm start
-```
-
-### 打包
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
+``` bash
+# 安装依赖
+$ npm i
+# 启动服务 访问 localhost:8888
+$ npm start
+# 生成环境打包
+$ npm run  build
 ```
 
 ### Customize configuration
